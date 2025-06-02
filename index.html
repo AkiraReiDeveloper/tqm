@@ -4,1577 +4,710 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Historia de Amor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Aquí iría el CSS, pero lo he omitido como solicitaste -->
-</head>
-
-<body>
+    <title>Te Amo ❤️</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@300;400;600;700&display=swap');
-
-        :root {
-            --blood-red: #9a0000;
-            --dark-red: #600000;
-            --black: #0a0a0a;
-            --shadow-red: rgba(255, 0, 0, 0.6);
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body,
-        html {
-            height: 100%;
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--black);
-            color: #fff;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        .noise-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYl/f39ra2uRkZGZmZlpaWmXl5dvb29xcXGTk5NnZ2c8TV1mAAAAG3RSTlNAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEAvEOwtAAAFVklEQVR4XpWWB67c2BUFb3g557T/hRo9/WUMZHlgr4Bg8Z4qQgQJlHI4A8SzFVrapvmTF9O7dmYRFZ60YiBhJRCgh1FYhiLAmdvX0CzTOpNE77ME0Zty/nWWzchDtiqrmQDeuv3powQ5ta2eN0FY0InkqDD73lT9c9lEzwUNqgFHs9VQce3TVClFCQrSTfOiYkVJQBmpbq2L6iZavPnAPcoU0dSw0SUTqz/GtrGuXfbyyBniKykOWQWGqwwMA7QiYAxi+IlPdqo+hYHnUt5ZPfnsHJyNiDtnpJyayNBkF6cWoYGAMY92U2hXHF/C1M8uP/ZtYdiuj26UdAdQQSXQErwSOMzt/XWRWAz5GuSBIkwG1H3FabJ2OsUOUhGC6tK4EMtJO0ttC6IBD3kM0ve0tJwMdSfjZo+EEISaeTr9P3wYrGjXqyC1krcKdhMpxEnt5JetoulscpyzhXN5FRpuPHvbeQaKxFAEB6EN+cYN6xD7RYGpXpNndMmZgM5Dcs3YSNFDHUo2LGfZuukSWyUYirJAdYbF3MfqEKmjM+I2EfhA94iG3L7uKrR+GdWD73ydlIB+6hgref1QTlmgmbM3/LeX5GI1Ux1RWpgxpLuZ2+I+IjzZ8wqE4nilvQdkUdfhzI5QDWy+kw5Wgg2pGpeEVeCCA7b85BO3F9DzxB3cdqvBzWcmzbyMiqhzuYqtHRVG2y4x+KOlnyqla8AoWWpuBoYRxzXrfKuILl6SfiWCbjxoZJUaCBj1CjH7GIaDbc9kqBY3W/Rgjda1iqQcOJu2WW+76pZC9QG7M00dffe9hNnseupFL53r8F7YHSwJWUKP2q+k7RdsxyOB11n0xtOvnW4irMMFNV4H0uqwS5ExsmP9AxbDTc9JwgneAT5vTiUSm1E7BSflSt3bfa1tv8Di3R8n3Af7MNWzs49hmauE2wP+ttrq+AsWpFG2awvsuOqbipWHgtuvuaAE+A1Z/7gC9hesnr+7wqCwG8c5yAg3AL1fm8T9AZtp/bbJGwl1pNrE7RuOX7PeMRUERVaPpEs+yqeoSmuOlokqw49pgomjLeh7icHNlG19yjs6XXOMedYm5xH2YxpV2tc0Ro2jJfxC50ApuxGob7lMsxfTbeUv07TyYxpeLucEH1gNd4IKH2LAg5TdVhlCafZvpskfncCfx8pOhJzd76bJWeYFnFciwcYfubRc12Ip/ppIhA1/mSZ/RxjFDrJC5xifFjJpY2Xl5zXdguFqYyTR1zSp1Y9p+tktDYYSNflcxI0iyO4TPBdlRcpeqjK/piF5bklq77VSEaA+z8qmJTFzIWiitbnzR794USKBUaT0NTEsVjZqLaFVqJoPN9ODG70IPbfBHKK+/q/AWR0tJzYHRULOa4MP+W/HfGadZUbfw177G7j/OGbIs8TahLyynl4X4RinF793Oz+BU0saXtUHrVBFT/DnA3ctNPoGbs4hRIjTok8i+algT1lTHi4SxFvONKNrgQFAq2/gFnWMXgwffgYMJpiKYkmW3tTg3ZQ9Jq+f8XN+A5eeUKHWvJWJ2sgJ1Sop+wwhqFVijqWaJhwtD8MNlSBeWNNWTa5Z5kPZw5+LbVT99wqTdx29lMUH4OIG/D86ruKEauBjvH5xy6um/Sfj7ei6UUVk4AIl3MyD4MSSTOFgSwsH/QJWaQ5as7ZcmgBZkzjjU1UrQ74ci1gWBCSGHtuV1H2mhSnO3Wp/3fEV5a+4wz//6qy8JxjZsmxxy5+4w9CDNJY09T072iKG0EnOS0arEYgXqYnXcYHwjTtUNAcMelOd4xpkoqiTYICWFq0JSiPfPDQdnt+4/wuqcXY47QILbgAAAABJRU5ErkJggg==');
-            z-index: 2000;
-            pointer-events: none;
-            opacity: 0.03;
-        }
-
-        .blood-drip {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 100px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="%239a0000" d="M0,0 L40,0 L45,50 L60,10 L80,70 L100,0 L140,0 L150,90 L170,40 L190,60 L220,0 L260,0 L280,80 L300,20 L320,30 L340,0 L380,0 L400,60 L420,40 L440,50 L460,0 L500,0 L520,70 L540,30 L560,80 L580,0 L620,0 L640,50 L660,60 L680,10 L700,0 L740,0 L760,40 L780,70 L800,50 L820,0 L860,0 L880,30 L900,60 L920,20 L940,0 L980,0 L1000,80 L1020,40 L1040,90 L1060,0 L1100,0 L1120,60 L1140,30 L1160,70 L1180,0 L1220,0 L1240,40 L1260,20 L1280,80 L1300,0 L1340,0 L1360,90 L1380,60 L1400,30 L1420,0 L1440,0 L1440,100 L0,100 Z"></path></svg>');
-            background-size: cover;
-            z-index: 1800;
-            pointer-events: none;
-        }
-
-        .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--black);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 1s ease;
-        }
-
-        .loader.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader-content {
-            text-align: center;
-        }
-
-        .heart-loader {
-            width: 100px;
-            height: 100px;
-            background-color: var(--blood-red);
+        body {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24, #ff9ff3, #54a0ff);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            font-family: 'Roboto', sans-serif;
+            height: 100vh;
+            overflow: hidden;
             position: relative;
-            transform: rotate(45deg);
-            animation: pulse 1.5s infinite;
-            margin: 0 auto 20px;
         }
 
-        .heart-loader:before,
-        .heart-loader:after {
-            content: "";
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background-color: var(--blood-red);
-            border-radius: 50%;
-        }
-
-        .heart-loader:before {
-            top: -50px;
-            left: 0;
-        }
-
-        .heart-loader:after {
-            top: 0;
-            left: -50px;
-        }
-
-        @keyframes pulse {
+        @keyframes gradientShift {
             0% {
-                transform: rotate(45deg) scale(0.8);
+                background-position: 0% 50%;
             }
 
             50% {
-                transform: rotate(45deg) scale(1);
+                background-position: 100% 50%;
             }
 
             100% {
-                transform: rotate(45deg) scale(0.8);
+                background-position: 0% 50%;
             }
         }
 
-        .section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            padding: 120px 0;
-        }
-
-        .sticky-container {
-            position: sticky;
-            top: 0;
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .parallax-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            z-index: 1;
-            filter: brightness(0.4);
-        }
-
-        .vignette {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            box-shadow: inset 0 0 150px 60px rgba(0, 0, 0, 0.8);
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .red-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(100, 0, 0, 0.1);
-            z-index: 3;
-            pointer-events: none;
-        }
-
-        .content-container {
-            position: relative;
-            z-index: 10;
-            width: 90%;
-            max-width: 1200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 60px;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-
-        .text-content {
-            flex: 1;
-            min-width: 300px;
-            backdrop-filter: blur(5px);
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(100, 0, 0, 0.2);
-            border: 1px solid rgba(155, 0, 0, 0.3);
-            transform: translateY(100px);
-            opacity: 0;
-        }
-
-        .image-content {
-            flex: 1;
-            min-width: 300px;
-            position: relative;
-            height: 400px;
-            transform: translateY(100px);
-            opacity: 0;
-        }
-
-        .horror-frame {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 20px solid transparent;
-            border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="none" stroke="%239a0000" stroke-width="8" d="M10,10 L90,10 L90,90 L10,90 Z M0,0 L15,0 L0,15 Z M85,0 L100,0 L100,15 Z M0,85 L0,100 L15,100 Z M100,85 L100,100 L85,100 Z"></path></svg>') 30;
-            z-index: 5;
-            filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.7));
-        }
-
-        .horror-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-            filter: contrast(1.1) saturate(1.2);
-        }
-
-        .floating-elements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 4;
-            pointer-events: none;
-        }
-
-        .floating-element {
-            position: absolute;
-            opacity: 0.8;
-            filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.4));
-        }
-
-        h1,
-        h2 {
-            font-family: 'Creepster', cursive;
-            color: var(--blood-red);
-            margin-bottom: 20px;
-            font-size: 3rem;
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.5);
-            letter-spacing: 2px;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .date {
-            display: inline-block;
-            background-color: var(--blood-red);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            margin: 15px 0;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-        }
-
-        .character {
-            position: absolute;
-            bottom: -60px;
-            z-index: 15;
-            height: 300px;
-            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.8));
-            transform: translateY(0);
-            transition: transform 0.3s ease;
-        }
-
-        .character.left {
-            left: -60px;
-        }
-
-        .character.right {
-            right: -60px;
-            transform: scaleX(-1);
-        }
-
-        .character:hover {
-            transform: translateY(-20px);
-        }
-
-        .character.right:hover {
-            transform: translateY(-20px) scaleX(-1);
-        }
-
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .glowing-btn {
-            position: relative;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 30px;
-            background-color: var(--blood-red);
-            color: white;
-            cursor: pointer;
-            overflow: hidden;
-            z-index: 1;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(155, 0, 0, 0.7);
-        }
-
-        .glowing-btn:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transition: left 0.7s ease;
-            z-index: -1;
-        }
-
-        .glowing-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
-        }
-
-        .glowing-btn:hover:before {
-            left: 100%;
-        }
-
-        .horror-transition {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            z-index: 9000;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.5s ease;
-        }
-
-        .horror-transition.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .horror-transition-content {
+        .main-message {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100%;
             text-align: center;
+            z-index: 100;
+            padding: 0 20px;
         }
 
-        .horror-transition img {
-            max-width: 300px;
-            filter: brightness(0) invert(1);
-            opacity: 0;
-            transform: scale(0);
+        .main-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.5rem;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+            font-weight: 700;
+            letter-spacing: 3px;
         }
 
-        .blood-splash {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            opacity: 0;
-        }
-
-        .celebration {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 9500;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.95);
-        }
-
-        .celebration-content {
-            text-align: center;
-            padding: 40px;
-            background-color: rgba(30, 0, 0, 0.7);
-            border-radius: 20px;
-            max-width: 600px;
-            border: 2px solid var(--blood-red);
-            box-shadow: 0 0 50px rgba(155, 0, 0, 0.8);
-        }
-
-        .celebration h1 {
-            margin-bottom: 30px;
-        }
-
-        .heart-particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .heart-particle {
-            position: absolute;
-            font-size: 20px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 1;
-            }
-
+        @keyframes pulse {
+            0%,
             100% {
-                transform: translateY(-100vh) rotate(720deg);
-                opacity: 0;
-            }
-        }
-
-        .navbar {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            display: flex;
-            padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 50px;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 0 20px rgba(155, 0, 0, 0.5);
-            border: 1px solid rgba(155, 0, 0, 0.3);
-        }
-
-        .nav-btn {
-            width: 15px;
-            height: 15px;
-            margin: 0 8px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .nav-btn.active {
-            background-color: var(--blood-red);
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-        }
-
-        .nav-btn:hover {
-            transform: scale(1.2);
-        }
-
-        /* Progress indicator */
-        .progress-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.1);
-            z-index: 1900;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background: var(--blood-red);
-            width: 0%;
-            box-shadow: 0 0 10px var(--blood-red);
-        }
-
-        /* Mobile adaptations */
-        @media (max-width: 768px) {
-            .content-container {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .image-content {
-                height: 300px;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .character {
-                height: 200px;
-            }
-        }
-
-        /* Animation classes */
-        .fade-in {
-            animation: fadeIn 1s forwards;
-        }
-
-        .scale-in {
-            animation: scaleIn 1s forwards;
-        }
-
-        .slide-in-left {
-            animation: slideInLeft 1s forwards;
-        }
-
-        .slide-in-right {
-            animation: slideInRight 1s forwards;
-        }
-
-        .bounce-in {
-            animation: bounceIn 1s forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes scaleIn {
-            from {
-                transform: scale(0);
-                opacity: 0;
-            }
-
-            to {
                 transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                transform: translateX(-100px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes bounceIn {
-            0% {
-                transform: scale(0.3);
-                opacity: 0;
             }
 
             50% {
                 transform: scale(1.05);
-                opacity: 0.9;
             }
+        }
 
-            70% {
-                transform: scale(0.9);
+        .subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.8rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .falling-item {
+            position: fixed;
+            font-size: 1.6rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            pointer-events: none;
+            top: -50px;
+            animation: fall linear infinite;
+            z-index: 1;
+            font-weight: 500;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .falling-word {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        .falling-emoji {
+            font-size: 2.2rem;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
             }
 
             100% {
-                transform: scale(1);
+                transform: translateY(calc(100vh + 100px)) rotate(360deg);
+                opacity: 0.8;
+            }
+        }
+
+        .heart-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-heart {
+            position: fixed;
+            font-size: 1.8rem;
+            bottom: -50px;
+            animation: floatUp 4s ease-out infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(0.5);
                 opacity: 1;
             }
+
+            50% {
+                opacity: 1;
+                transform: translateY(-50vh) scale(1);
+            }
+
+            100% {
+                transform: translateY(calc(-100vh - 50px)) scale(0.5);
+                opacity: 0;
+            }
         }
 
-        /* CSS para versión móvil */
+        .play-button {
+            background: rgba(255, 255, 255, 0.25);
+            border: 3px solid white;
+            color: white;
+            padding: 20px 40px;
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(15px);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 0 auto;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .play-button:hover,
+        .play-button:active {
+            background: rgba(255, 255, 255, 0.35);
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .volume-control-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 200;
+        }
+
+        .volume-icon {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .volume-control {
+            width: 100px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            touch-action: manipulation;
+        }
+
+        .volume-control::-webkit-slider-thumb {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .volume-control::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        .volume-control::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .song-info {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px 20px;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 200;
+            max-width: calc(100vw - 60px);
+        }
+
+        .song-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .loading-message {
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 5px;
+        }
+
+        /* OPTIMIZACIONES PARA MÓVIL */
         @media (max-width: 768px) {
-
-            /* Ajustes generales */
-            body,
-            html {
-                overflow-x: hidden;
+            .main-title {
+                font-size: 2.8rem;
+                letter-spacing: 2px;
+                margin-bottom: 15px;
             }
 
-            h1 {
-                font-size: 2rem !important;
+            .subtitle {
+                font-size: 1.3rem;
+                margin-bottom: 30px;
+                line-height: 1.4;
             }
 
-            h2 {
-                font-size: 1.7rem !important;
+            .play-button {
+                font-size: 1.4rem;
+                padding: 18px 35px;
+                gap: 12px;
+                min-height: 60px;
             }
 
-            p {
-                font-size: 1rem !important;
-                line-height: 1.4 !important;
+            .volume-control-container {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px 16px;
+                border-radius: 30px;
             }
 
-            /* Contenedor principal */
-            .content-container {
-                flex-direction: column !important;
-                gap: 20px !important;
-                padding: 15px !important;
-                width: 95% !important;
+            .volume-control {
+                width: 70px;
+                height: 6px;
             }
 
-            /* Ajustes de secciones */
-            .section {
-                padding: 80px 0 !important;
-                min-height: auto !important;
+            .volume-control::-webkit-slider-thumb {
+                width: 20px;
+                height: 20px;
             }
 
-            /* Contenido de texto */
-            .text-content {
-                min-width: 100% !important;
-                padding: 20px !important;
+            .volume-icon {
+                font-size: 1.1rem;
             }
 
-            /* Contenido de imagen */
-            .image-content {
-                min-width: 100% !important;
-                height: 250px !important;
+            .song-info {
+                top: 15px;
+                left: 15px;
+                padding: 12px 16px;
+                border-radius: 20px;
+                max-width: calc(100vw - 30px);
             }
 
-            /* Elementos flotantes */
-            .floating-element {
-                width: 60px !important;
+            .song-title {
+                font-size: 0.9rem;
             }
 
-            /* Personajes */
-            .character {
-                height: 180px !important;
-                bottom: -30px !important;
+            .loading-message {
+                font-size: 0.75rem;
             }
 
-            .character.left {
-                left: -30px !important;
+            .falling-word {
+                font-size: 1.1rem;
             }
 
-            .character.right {
-                right: -30px !important;
+            .falling-emoji {
+                font-size: 1.8rem;
             }
 
-            /* Barra de navegación */
-            .navbar {
-                bottom: 15px !important;
-                padding: 8px 15px !important;
+            .falling-item {
+                font-size: 1.3rem;
             }
 
-            .nav-btn {
-                width: 12px !important;
-                height: 12px !important;
-                margin: 0 5px !important;
-            }
-
-            /* Botones */
-            .glowing-btn {
-                padding: 12px 25px !important;
-                font-size: 1rem !important;
-            }
-
-            .btn-container {
-                margin-top: 20px !important;
-            }
-
-            /* Loader */
-            .heart-loader {
-                width: 70px !important;
-                height: 70px !important;
-            }
-
-            .heart-loader:before,
-            .heart-loader:after {
-                width: 70px !important;
-                height: 70px !important;
-            }
-
-            .heart-loader:before {
-                top: -35px !important;
-            }
-
-            .heart-loader:after {
-                left: -35px !important;
-            }
-
-            /* Pantalla de celebración */
-            .celebration-content {
-                padding: 25px !important;
-                width: 85% !important;
-                max-width: none !important;
-            }
-
-            /* Fecha */
-            .date {
-                padding: 3px 10px !important;
-                font-size: 0.9rem !important;
-                margin: 10px 0 !important;
-            }
-
-            /* Vignette más intensa */
-            .vignette {
-                box-shadow: inset 0 0 120px 50px rgba(0, 0, 0, 0.9) !important;
-            }
-
-            /* Ajuste de blood drip */
-            .blood-drip {
-                height: 70px !important;
-            }
-
-            /* Horror frame */
-            .horror-frame {
-                border-width: 15px !important;
-            }
-
-            /* Ajuste para la transición */
-            .horror-transition-content img {
-                max-width: 200px !important;
-            }
-
-            /* Barra de progreso */
-            .progress-container {
-                height: 3px !important;
-            }
-
-            /* Orientación forzada */
-            @media (orientation: landscape) and (max-height: 500px) {
-                .force-portrait {
-                    display: flex;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.95);
-                    z-index: 10000;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    text-align: center;
-                    padding: 20px;
-                }
-
-                .force-portrait h2 {
-                    color: #fff;
-                    margin-bottom: 15px;
-                }
-
-                .force-portrait p {
-                    color: #fff;
-                }
-
-                .rotate-icon {
-                    width: 80px;
-                    height: 80px;
-                    border: 2px solid #fff;
-                    border-radius: 10px;
-                    position: relative;
-                    margin: 20px 0;
-                    animation: rotateDevice 2s infinite;
-                }
-
-                @keyframes rotateDevice {
-                    0% {
-                        transform: rotate(0deg);
-                    }
-
-                    50% {
-                        transform: rotate(90deg);
-                    }
-
-                    100% {
-                        transform: rotate(0deg);
-                    }
-                }
-            }
-
-            /* Efecto de parallax ajustado */
-            .parallax-bg {
-                background-attachment: scroll !important;
+            .floating-heart {
+                font-size: 1.5rem;
             }
         }
 
-        /* CSS para pantallas muy pequeñas */
-        @media (max-width: 380px) {
-            h1 {
-                font-size: 1.7rem !important;
+        /* MÓVILES PEQUEÑOS */
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 2.2rem;
+                letter-spacing: 1px;
             }
 
-            h2 {
-                font-size: 1.5rem !important;
+            .subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
             }
 
-            p {
-                font-size: 0.9rem !important;
+            .play-button {
+                font-size: 1.2rem;
+                padding: 15px 25px;
+                gap: 10px;
+                min-height: 55px;
             }
 
-            .image-content {
-                height: 200px !important;
+            .volume-control-container {
+                bottom: 10px;
+                right: 10px;
+                padding: 10px 12px;
             }
 
-            .character {
-                height: 150px !important;
+            .volume-control {
+                width: 60px;
             }
 
-            .text-content,
-            .image-content {
-                transform: translateY(50px) !important;
+            .song-info {
+                top: 10px;
+                left: 10px;
+                padding: 10px 12px;
+            }
+
+            .main-message {
+                padding: 0 15px;
+            }
+        }
+
+        /* ORIENTACIÓN HORIZONTAL EN MÓVIL */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .main-title {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+
+            .play-button {
+                font-size: 1.1rem;
+                padding: 12px 20px;
+                min-height: 45px;
+            }
+
+            .song-info {
+                top: 10px;
+                left: 10px;
+                padding: 8px 12px;
+            }
+
+            .volume-control-container {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 10px;
+            }
+        }
+
+        /* MEJORAS TÁCTILES */
+        @media (hover: none) and (pointer: coarse) {
+            .play-button:active {
+                transform: scale(0.98);
+                background: rgba(255, 255, 255, 0.4);
+            }
+
+            .volume-control::-webkit-slider-thumb {
+                width: 22px;
+                height: 22px;
             }
         }
     </style>
+</head>
 
-    <!-- Loader -->
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="heart-loader"></div>
-            <h2>Cargando Nuestra Historia...</h2>
-        </div>
+<body>
+    <div class="song-info">
+        <div class="song-title" id="currentSong">Cargando música...</div>
+        <div class="loading-message" id="loadingMsg">Preparando tu canción...</div>
     </div>
 
-    <!-- Horror transition -->
-    <div class="horror-transition" id="horrorTransition">
-        <div class="horror-transition-content">
-            <div class="blood-splash" id="bloodSplash"></div>
-            <img src="./img/tiffanychucky.jpg" alt="Chucky & Tiffany" id="transitionImage">
-        </div>
+    <div class="main-message">
+        <h1 class="main-title">💖 TE AMO 💖</h1>
+        <p class="subtitle">Eres la razón de mi sonrisa cada día</p>
+
+        <button class="play-button" onclick="toggleMusic()">
+            <span id="playIcon">▶️</span>
+            <span id="playText">REPRODUCIR</span>
+        </button>
     </div>
 
-    <!-- Celebration screen -->
-    <div class="celebration" id="celebration">
-        <div class="heart-particles" id="heartParticles"></div>
-        <div class="celebration-content">
-            <h1>¡Ahora somos oficialmente novios!</h1>
-            <p>Como Chucky y Tiffany.</p>
-            <p>Este es el inicio de nuestra historia juntos.</p>
-            <button class="glowing-btn" id="continueBtn">Continuar nuestra historia ❤️</button>
-        </div>
+    <div class="volume-control-container">
+        <span class="volume-icon">🔊</span>
+        <input type="range" class="volume-control" id="volumeSlider" min="0" max="100" value="50">
     </div>
 
-    <!-- Navigation bar -->
-    <div class="navbar" id="navbar">
-        <!-- Navigation buttons will be added by JavaScript -->
-    </div>
+    <div class="heart-container"></div>
 
-    <!-- Progress indicator -->
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
+    <audio id="audioPlayer" loop></audio>
 
-    <!-- Visual effects -->
-    <div class="noise-overlay"></div>
-    <div class="blood-drip"></div>
-
-    <!-- Main content -->
-    <div id="mainContent">
-        <!-- Section 1: Intro -->
-        <section class="section" id="section1" data-title="Nuestra Historia">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/cuchillo.png" alt="cuchillo" class="floating-element"
-                        style="top: 20%; left: 10%; width: 150px; transform: rotate(25deg);">
-                    <img src="./img/corazon.png" alt="corazón" class="floating-element"
-                        style="top: 70%; right: 15%; width: 120px;">
-                    <img src="./img/cuchillo.png" alt="cuchillo" class="floating-element"
-                        style="bottom: 30%; left: 20%; width: 100px; transform: rotate(-15deg);">
-                </div>
-                <div class="content-container">
-                    <div class="text-content" id="intro-text">
-                        <h1>Nuestra Historia de Terror y Amor</h1>
-                        <p>Como en las mejores películas de terror, las historias de amor más intensas comienzan con un
-                            encuentro inesperado. Así inició nuestra historia, con momentos que parecían casualidad pero
-                            que estaban destinados a unir nuestros caminos para siempre.</p>
-                        <p>Desliza para descubrir nuestra historia de amor, capítulo por capítulo.</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2: El Comienzo -->
-        <section class="section" id="section2" data-title="El Comienzo">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/json.webp" alt="elemento1" class="floating-element"
-                        style="top: 15%; right: 10%; width: 130px;">
-                    <img src="./img/jig.png" alt="elemento2" class="floating-element"
-                        style="bottom: 20%; right: 25%; width: 90px;">
-                </div>
-                <div class="content-container">
-                    <div class="image-content" id="beginning-image">
-                        <div class="horror-frame"></div>
-                        <img src="./img/posada.jpeg" alt="Primer encuentro" class="horror-image">
-                    </div>
-                    <div class="text-content" id="beginning-text">
-                        <h2>El Comienzo</h2>
-                        <div class="date">15 de diciembre de 2024</div>
-                        <p>Todo comenzó en aquella posada navideña. Entre luces tenues y risas, me atrajo inmediatamente
-                            tu belleza, pero lo que realmente capturó mi atención fue ese brillo en tus ojos cuando
-                            hablabas de películas de terror.</p>
-                        <p>Ese interés compartido fue la primera chispa que encendió algo especial.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3: Conociéndonos -->
-        <section class="section" id="section3" data-title="Conociéndonos">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/mayers.jpg" alt="elemento1" class="floating-element"
-                        style="top: 15%; right: 10%; width: 130px;">
-                    <img src="./img/texas.webp" alt="elemento2" class="floating-element"
-                        style="bottom: 20%; right: 25%; width: 90px;">
-                    <img src="./img/corazon.png" alt="elemento3" class="floating-element"
-                        style="top: 30%; left: 15%; width: 110px; transform: rotate(15deg);">
-                </div>
-                <div class="content-container">
-                    <div class="text-content" id="knowing-text">
-                        <h2>Conociéndonos</h2>
-                        <p>Poco a poco seguimos hablando y cada conversación me hacía descubrir lo interesante que eres.
-                            Tu forma de ver el mundo, tus pensamientos, tus gustos... cada detalle de ti me intrigaba y
-                            me atraía cada vez más.</p>
-                        <p>Con cada mensaje, con cada llamada, te ibas convirtiendo en alguien especial en mi vida.</p>
-                    </div>
-                    <div class="image-content" id="knowing-image">
-                        <div class="horror-frame"></div>
-                        <img src="./img/collagewhats.jpg" alt="Conversaciones" class="horror-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 4: Sentimientos -->
-        <section class="section" id="section4" data-title="Sentimientos">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/corazon.png" alt="corazón" class="floating-element"
-                        style="top: 20%; right: 20%; width: 100px;">
-                    <img src="./img/corazon.png" alt="corazón" class="floating-element"
-                        style="bottom: 30%; left: 25%; width: 80px;">
-                </div>
-                <div class="content-container">
-                    <div class="image-content" id="feelings-image">
-                        <div class="horror-frame"></div>
-                        <img src="./img/cafe.jpeg" alt="Sentimientos" class="horror-image">
-                    </div>
-                    <div class="text-content" id="feelings-text">
-                        <h2>Sentimientos Crecientes</h2>
-                        <p>Mi corazón se intensificaba con cada una de nuestras conversaciones. En solo algunos meses,
-                            habías despertado en mí una ternura y cariño que nunca antes había sentido por alguien más.
-                        </p>
-                        <p>Cada día, mis sentimientos crecían, transformándose en algo hermoso y profundo que no podía
-                            ignorar.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Tu Mirada -->
-        <section class="section" id="section5" data-title="Tu Mirada">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/corazon.png" alt="elemento4" class="floating-element"
-                        style="top: 25%; left: 20%; width: 120px;">
-                </div>
-                <div class="content-container">
-                    <div class="text-content" id="look-text">
-                        <h2>Tu Mirada</h2>
-                        <p>Aunque te cuesta ser muy expresiva sentimentalmente, tu ternura se nota solo con tu mirada.
-                            Esos ojos que dicen todo lo que a veces no pueden expresar tus palabras.</p>
-                        <p>Eres tan bonita que no puedo dejar de admirar tu belleza, tanto exterior como interior.</p>
-                    </div>
-                    <div class="image-content" id="look-image">
-                        <div class="horror-frame"></div>
-                        <img src="./img/sonrrisa.jpg" alt="Mirada" class="horror-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 6: Nuestros Momentos -->
-        <section class="section" id="section6" data-title="Momentos Juntos">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/jig.png" alt="película" class="floating-element"
-                        style="top: 15%; right: 15%; width: 130px; transform: rotate(-10deg);">
-                    <img src="./img/json.webp" alt="palomitas" class="floating-element"
-                        style="bottom: 25%; left: 20%; width: 100px;">
-                    <img src="./img/mayers.jpg" alt="elemento1" class="floating-element"
-                        style="top: 15%; right: 10%; width: 130px;">
-                    <img src="./img/texas.webp" alt="elemento2" class="floating-element"
-                        style="bottom: 20%; right: 25%; width: 90px;">
-                </div>
-                <div class="content-container">
-                    <div class="image-content" id="moments-image">
-                        <div class="horror-frame"></div>
-                        <img src="./img/collagemovies.jpg" alt="Películas juntos" class="horror-image">
-                    </div>
-                    <div class="text-content" id="moments-text">
-                        <h2>Nuestros Momentos</h2>
-                        <p>Vemos películas juntos, series juntos. Todas las noches compartimos algo que nos une aún más.
-                            Hablamos por teléfono y nos dormimos sin colgar.</p>
-                        <p>Desde entonces, mis noches y mis días son más hermosos. Cada momento contigo, cada risa, cada
-                            silencio compartido, hace que mi vida sea más completa.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 7: Primer Beso -->
-        <section class="section" id="section7" data-title="Primer Beso">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/corazon.png" alt="corazón" class="floating-element"
-                        style="top: 30%; right: 25%; width: 90px;">
-                </div>
-                <div class="content-container">
-                    <div class="text-content" id="kiss-text">
-                        <h2>Nuestro Primer Beso</h2>
-                        <div class="date">8 de marzo de 2025</div>
-                        <p>El 8 de marzo fue nuestro primer beso, y aunque tal vez no fue el más romántico, para mí fue el beso más sincero y hermoso que alguna vez he dado.</p>
-                        <p>En ese momento supe que lo que sentía por ti era real y profundo.</p>
-                    </div>
-                    <div class="image-content" id="kiss-image">
-                        <div class="horror-frame"></div>
-                        <img src="./img/chucky&tiffany.gif" alt="Primer beso" class="horror-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 8: Primera Salida -->
-        <section class="section" id="section8" data-title="Primera Salida">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/json.webp" alt="elemento5" class="floating-element"
-                        style="bottom: 20%; right: 15%; width: 110px;">
-                </div>
-                <div class="content-container">
-                    <div class="image-content" id="date-image">
-                        <div class="horror-frame"></div>
-                        <img src="./img/chucky-y-tiffany.jpg" alt="Primera salida" class="horror-image">
-                    </div>
-                    <div class="text-content" id="date-text">
-                        <h2>Nuestra Primera Salida</h2>
-                        <div class="date">9 de marzo de 2025</div>
-                        <p>El 9 de marzo salimos por primera vez con la sensación de que ya éramos novios, tomados de la
-                            mano, para mi fue descubrir algo nuevo, algo que nunca había sentido.</p>
-                        <p>Recorrer las calles contigo, sentir tu mano entrelazada con la mía, fue como si el mundo
-                            entero se transformara en un lugar más hermoso.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 9: Lo que Siento -->
-        <section class="section" id="section9" data-title="Lo Que Siento">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/corazon.png" alt="corazón" class="floating-element"
-                        style="top: 20%; left: 15%; width: 120px;">
-                    <img src="./img/corazon.png" alt="corazón" class="floating-element"
-                        style="bottom: 30%; right: 20%; width: 100px;">
-                </div>
-                <div class="content-container">
-                    <div class="text-content" id="feelings2-text">
-                        <h2>Lo Que Siento Por Ti</h2>
-                        <p>A día de hoy he compartido momentos hermosos contigo y quisiera seguir compartiendo más de mi
-                            tiempo y mi ser contigo. Eres especial para mí, tan hermosa y perfecta tal como eres.</p>
-                        <p>Cada día me enamoro más de tu sonrisa, de tu forma de ser, de cómo me haces sentir cuando
-                            estamos juntos.</p>
-                    </div>
-                    <div class="image-content" id="feelings2-image">
-                        <div class="horror-frame"></div>
-                        <img src="./img/pHZhxIy.avif" alt="Momentos juntos" class="horror-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 10: Chucky y Tiffany -->
-        <section class="section" id="section10" data-title="Chucky y Tiffany">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/cuchillo.png" alt="cuchillo" class="floating-element"
-                        style="top: 15%; right: 10%; width: 140px; transform: rotate(25deg);">
-                    <img src="./img/jig.png" alt="elemento6" class="floating-element"
-                        style="bottom: 20%; left: 15%; width: 110px;">
-                </div>
-                <div class="content-container">
-                    <div class="image-content" id="chucky-image">
-                        <div class="horror-frame"></div>
-                        <img src="./img/c&t.jpg" alt="Chucky y Tiffany" class="horror-image">
-                        <img src="./img/chucky.png" alt="Chucky" class="character left">
-                        <img src="./img/tiffany.png" alt="Tiffany" class="character right">
-                    </div>
-                    <div class="text-content" id="chucky-text">
-                        <h2>Como Chucky y Tiffany</h2>
-                        <p>Como a ambos nos gustan las películas de terror, me gusta pensar que somos como Chucky y
-                            Tiffany - diferentes, un poco locos, pero perfectos juntos, unidos por un vínculo que va más
-                            allá de lo ordinario.</p>
-                        <p>Una pareja única, auténtica, con su propio estilo y su propia historia. Diferentes a los
-                            demás, pero perfectos el uno para el otro.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 11: Propuesta -->
-        <section class="section" id="section11" data-title="Propuesta">
-            <div class="sticky-container">
-                <div class="parallax-bg" style="background-image: url('/api/placeholder/1920/1080');"></div>
-                <div class="vignette"></div>
-                <div class="red-overlay"></div>
-                <div class="floating-elements">
-                    <img src="./img/corazon.png" alt="corazón" class="floating-element"
-                        style="top: 10%; left: 20%; width: 120px;">
-                    <img src="./img/corazon.png" alt="corazón" class="floating-element"
-                        style="top: 30%; right: 25%; width: 100px;">
-                    <img src="./img/corazon.png" alt="corazón" class="floating-element"
-                        style="bottom: 25%; left: 15%; width: 80px;">
-                    <img src="./img/corazon.png" alt="corazón" class="floating-element"
-                        style="bottom: 15%; right: 20%; width: 90px;">
-                </div>
-                <div class="content-container">
-                    <div class="text-content" id="proposal-text">
-                        <h1>¿Quieres ser mi novia?</h1>
-                        <p>Después de todo lo que hemos vivido, de todos los momentos compartidos, de todas las
-                            emociones que has despertado en mí, quiero pedirte oficialmente que seas mi novia.</p>
-                        <p>Quiero seguir construyendo esta historia juntos, compartir más momentos, más películas de
-                            terror, más risas y más amor.</p>
-                        <div class="btn-container">
-                            <button id="acceptBtn" class="glowing-btn">¡Claro que acepto!</button>
-                        </div>
-                    </div>
-                    <div class="image-content" id="proposal-image">
-                        <div class="horror-frame"></div>
-                        <img src="./img/chuckie-chuckies-bride.gif" alt="Propuesta" class="horror-image">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="force-portrait" id="orientationMessage" style="display: none;">
-            <h2>¡Gira tu dispositivo!</h2>
-            <div class="rotate-icon"></div>
-            <p>Para una mejor experiencia, por favor utiliza tu dispositivo en orientación vertical.</p>
-        </div>
-
-    </div>
     <script>
-        // Inicializar GSAP ScrollTrigger
-        gsap.registerPlugin(ScrollTrigger);
+        // ===============================================
+        // CONFIGURACIÓN DE LA CANCIÓN Y LETRA
+        // ===============================================
 
-        // Configuración de datos para las secciones
-        const sectionData = [
-            { id: "section1", bg: "/api/placeholder/1920/1080", title: "Nuestra Historia" },
-            { id: "section2", bg: "/api/placeholder/1920/1080", title: "El Comienzo", date: "15 de diciembre 2024" },
-            { id: "section3", bg: "/api/placeholder/1920/1080", title: "Conociéndonos" },
-            { id: "section4", bg: "/api/placeholder/1920/1080", title: "Sentimientos" },
-            { id: "section5", bg: "/api/placeholder/1920/1080", title: "Tu Mirada" },
-            { id: "section6", bg: "/api/placeholder/1920/1080", title: "Momentos Juntos" },
-            { id: "section7", bg: "/api/placeholder/1920/1080", title: "Primer Beso", date: "8 de marzo 2025" },
-            { id: "section8", bg: "/api/placeholder/1920/1080", title: "Primera Salida", date: "9 de marzo 2025" },
-            { id: "section9", bg: "/api/placeholder/1920/1080", title: "Lo Que Siento" },
-            { id: "section10", bg: "/api/placeholder/1920/1080", title: "Chucky y Tiffany" },
-            { id: "section11", bg: "/api/placeholder/1920/1080", title: "Propuesta" }
+        // AQUÍ PONES LA URL DE TU CANCIÓN (puede ser local o de internet)
+        const songUrl = "./lo_tienes_todo.mp3"; // Cambia por tu URL
+
+        // AQUÍ PONES EL TÍTULO DE LA CANCIÓN
+        const songTitle = "Lo Tienes Todo";
+
+        // AQUÍ PONES LA LETRA COMPLETA DE LA CANCIÓN
+        const songLyrics = `
+        Nunca había amado como a ti
+        Desde que me quieres, comprendí
+        Que Dios tenía otros planes para mí
+        Y hasta que tú llegaste finalmente lo entendí
+        Que era nuestro momento
+        Y que ya nos tocaba ser feliz
+        ¿Qué más puedo pedir?, si tú lo tienes todo
+        Contigo me aplaqué, me hiciste a tu modo
+        Por ti, mi corazón ya no me cabe aquí en el pecho
+        Quiero gastar los días de mi vida a tu lado
+        Me gusta que nos vean tomados de la mano
+        Que todo el mundo sepa que me tienes enamorado
+        Y somos
+        ¡Julión Álvarez, oiga!
+        Que Dios tenía otros planes para mí
+        Y hasta que tú llegaste finalmente lo entendí
+        Que era nuestro momento
+        Y que ya nos tocaba ser feliz
+        ¿Qué más puedo pedir?, si tú lo tienes todo
+        Contigo me aplaqué, me hiciste a tu modo
+        Por ti, mi corazón ya no me cabe aquí en el pecho
+        Quiero gastar los días de mi vida a tu lado
+        Me gusta que nos vean tomados de la mano
+        Que todo el mundo sepa que me tienes enamorado
+        `;
+
+        // ===============================================
+        // NO MODIFICAR EL CÓDIGO DE ABAJO
+        // ===============================================
+
+        const romanticWords = [
+            '💕', '❤️', '💖', '💝', '💗', '💓', '💘', '💞', '💟', '🌹',
+            '✨', '🌟', '⭐', '💫', '🦋', '🌺', '🌸', '🌷', '🌻', '🥰'
         ];
 
-        // Elementos de animación flotantes (para simular objetos flotando en escenas)
-        const floatingElements = [
-            { src: "./img/cuchillo.png", alt: "cuchillo", style: "top: 20%; left: 10%; width: 100px; transform: rotate(25deg);" },
-            { src: "./img/corazon.png", alt: "corazón", style: "top: 70%; right: 15%; width: 80px;" },
-            { src: "/api/placeholder/150/150", alt: "muñeco", style: "bottom: 30%; left: 20%; width: 120px;" }
-        ];
+        let currentLyrics = [];
+        let isPlaying = false;
+        let audioPlayer = document.getElementById('audioPlayer');
+        let musicLoaded = false;
 
-        // Efectos de sangre para las transiciones
-        const bloodEffects = [
-            "/api/placeholder/800/600",
-            "/api/placeholder/800/600",
-            "/api/placeholder/800/600"
-        ];
+        // Procesar la letra de la canción
+        function processLyrics() {
+            const words = songLyrics.split(/\s+/).filter(word => word.length > 2);
+            const lines = songLyrics.split('\n').filter(line => line.trim().length > 5);
 
-        // Función de carga al inicio
-        document.addEventListener('DOMContentLoaded', function () {
-            // Crear la barra de navegación
-            createNavigation();
+            currentLyrics = [];
 
-            // Configurar animaciones de scroll
-            setupScrollAnimations();
+            // Agregar palabras individuales (limpias)
+            words.forEach(word => {
+                const cleanWord = word.replace(/[.,!?;:()]/g, '').trim();
+                if (cleanWord.length > 2) {
+                    currentLyrics.push(cleanWord);
+                }
+            });
 
-            // Configurar botón de aceptar
-            setupAcceptButton();
+            // Agregar frases cortas
+            lines.forEach(line => {
+                const cleanLine = line.trim();
+                if (cleanLine.length > 5 && cleanLine.length < 30) {
+                    currentLyrics.push(cleanLine);
+                }
+            });
 
-            // Configurar barra de progreso
-            setupProgressBar();
+            console.log('Letra procesada:', currentLyrics.length, 'elementos');
+        }
 
-            // Simular carga y ocultar el loader después de un tiempo
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-                // Animar elementos de la primera sección después de que desaparezca el loader
-                animateSection('section1');
-            }, 5500);
+        // Cargar la música automáticamente
+        function loadMusic() {
+            if (songUrl && songUrl.trim() !== "") {
+                audioPlayer.src = songUrl;
+                document.getElementById('currentSong').textContent = songTitle;
+
+                audioPlayer.addEventListener('loadstart', () => {
+                    document.getElementById('loadingMsg').textContent = 'Cargando música...';
+                });
+
+                audioPlayer.addEventListener('canplay', () => {
+                    musicLoaded = true;
+                    document.getElementById('loadingMsg').textContent = '¡Lista para reproducir! 🎵';
+                });
+
+                audioPlayer.addEventListener('error', () => {
+                    document.getElementById('loadingMsg').textContent = 'Error al cargar música 😔';
+                    document.getElementById('currentSong').textContent = 'Error en la canción';
+                });
+            } else {
+                document.getElementById('currentSong').textContent = 'Sin música configurada';
+                document.getElementById('loadingMsg').textContent = 'Configura la URL en el código';
+            }
+        }
+
+        // Control de volumen
+        document.getElementById('volumeSlider').addEventListener('input', function (e) {
+            audioPlayer.volume = e.target.value / 100;
         });
 
-        // Función para crear la navegación
-        function createNavigation() {
-            const navbar = document.getElementById('navbar');
+        function toggleMusic() {
+            const playIcon = document.getElementById('playIcon');
+            const playText = document.getElementById('playText');
 
-            sectionData.forEach((section, index) => {
-                const navBtn = document.createElement('div');
-                navBtn.className = 'nav-btn';
-                navBtn.dataset.target = section.id;
-                if (index === 0) navBtn.classList.add('active');
-
-                navBtn.addEventListener('click', function () {
-                    document.getElementById(section.id).scrollIntoView({ behavior: 'smooth' });
-                });
-
-                navbar.appendChild(navBtn);
-            });
-        }
-
-        // Función para configurar animaciones de scroll
-        function setupScrollAnimations() {
-            // Animaciones para cada sección al hacer scroll
-            sectionData.forEach((section, index) => {
-                const sectionEl = document.getElementById(section.id);
-
-                // Crear observador de intersección para detectar cuando la sección está visible
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            // Activar el botón de navegación correspondiente
-                            document.querySelectorAll('.nav-btn').forEach(btn => {
-                                btn.classList.remove('active');
-                                if (btn.dataset.target === section.id) btn.classList.add('active');
-                            });
-
-                            // Animar elementos de la sección
-                            animateSection(section.id);
-                        }
-                    });
-                }, { threshold: 0.3 });
-
-                observer.observe(sectionEl);
-
-                // Configurar parallax para el fondo
-                gsap.to(sectionEl.querySelector('.parallax-bg'), {
-                    y: '20%',
-                    ease: "none",
-                    scrollTrigger: {
-                        trigger: sectionEl,
-                        scrub: true
-                    }
-                });
-
-                // Configurar animaciones para elementos flotantes
-                const floatingEls = sectionEl.querySelectorAll('.floating-element');
-                floatingEls.forEach(el => {
-                    gsap.to(el, {
-                        y: gsap.utils.random(-30, 30),
-                        x: gsap.utils.random(-20, 20),
-                        rotation: gsap.utils.random(-15, 15),
-                        duration: gsap.utils.random(3, 6),
-                        repeat: -1,
-                        yoyo: true,
-                        ease: "sine.inOut"
-                    });
-                });
-            });
-        }
-
-        // Función para animar elementos de una sección
-        function animateSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            const textContent = section.querySelector('.text-content');
-            const imageContent = section.querySelector('.image-content');
-
-            // Resetear animaciones
-            gsap.set([textContent, imageContent], { opacity: 0, y: 100 });
-
-            // Animar contenido de texto con delay
-            gsap.to(textContent, {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                ease: "power2.out",
-                delay: 0.2
-            });
-
-            // Animar contenido de imagen
-            gsap.to(imageContent, {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                ease: "power2.out",
-                delay: 0.5
-            });
-
-            // Animar personajes si existen
-            const characters = section.querySelectorAll('.character');
-            if (characters.length) {
-                gsap.from(characters, {
-                    y: 100,
-                    opacity: 0,
-                    duration: 1.2,
-                    stagger: 0.2,
-                    ease: "back.out(1.7)",
-                    delay: 0.8
-                });
+            if (!musicLoaded) {
+                alert('La música aún se está cargando, espera un momento...');
+                return;
             }
-        }
 
-        // Función para configurar el botón de aceptar
-        function setupAcceptButton() {
-            const acceptBtn = document.getElementById('acceptBtn');
-            const celebration = document.getElementById('celebration');
-            const heartParticles = document.getElementById('heartParticles');
-            const continueBtn = document.getElementById('continueBtn');
-            const horrorTransition = document.getElementById('horrorTransition');
-            const bloodSplash = document.getElementById('bloodSplash');
-            const transitionImage = document.getElementById('transitionImage');
-
-            acceptBtn.addEventListener('click', function () {
-                // Activar transición de horror
-                horrorTransition.classList.add('active');
-
-                // Animar mancha de sangre
-                setTimeout(() => {
-                    bloodSplash.style.backgroundImage = `url(${bloodEffects[Math.floor(Math.random() * bloodEffects.length)]})`;
-                    gsap.to(bloodSplash, {
-                        opacity: 1,
-                        duration: 0.3,
-                        onComplete: () => {
-                            // Animar imagen de transición
-                            gsap.to(transitionImage, {
-                                opacity: 1,
-                                scale: 1,
-                                duration: 0.5,
-                                delay: 0.3,
-                                onComplete: () => {
-                                    // Ocultar transición y mostrar celebración
-                                    setTimeout(() => {
-                                        horrorTransition.classList.remove('active');
-                                        celebration.style.display = 'flex';
-                                        createHeartParticles();
-                                    }, 1000);
-                                }
-                            });
-                        }
-                    });
-                }, 300);
-            });
-
-            // Botón para continuar después de la celebración
-            continueBtn.addEventListener('click', function () {
-                celebration.style.display = 'none';
-            });
-        }
-
-        // Función para crear partículas de corazón en la celebración
-        function createHeartParticles() {
-            const heartParticles = document.getElementById('heartParticles');
-            heartParticles.innerHTML = ''; // Limpiar corazones previos
-
-            // Crear múltiples corazones
-            for (let i = 0; i < 100; i++) {
-                const heart = document.createElement('div');
-                heart.className = 'heart-particle';
-                heart.innerHTML = '❤️';
-                heart.style.left = Math.random() * 100 + 'vw';
-                heart.style.animationDelay = Math.random() * 4 + 's';
-                heart.style.animationDuration = Math.random() * 5 + 5 + 's';
-                heart.style.opacity = Math.random() * 0.5 + 0.5;
-                heart.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
-                heartParticles.appendChild(heart);
-            }
-        }
-
-        // Función para configurar la barra de progreso
-        function setupProgressBar() {
-            const progressBar = document.getElementById('progressBar');
-
-            window.addEventListener('scroll', () => {
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                progressBar.style.width = scrolled + '%';
-            });
-        }
-
-        // Función para aplicar transiciones entre secciones
-        function transitionToSection(sectionId) {
-            const horrorTransition = document.getElementById('horrorTransition');
-            const bloodSplash = document.getElementById('bloodSplash');
-            const transitionImage = document.getElementById('transitionImage');
-
-            // Activar transición
-            horrorTransition.classList.add('active');
-
-            // Animar elementos de la transición
-            setTimeout(() => {
-                // Mostrar splash de sangre aleatorio
-                bloodSplash.style.backgroundImage = `url(${bloodEffects[Math.floor(Math.random() * bloodEffects.length)]})`;
-                gsap.to(bloodSplash, {
-                    opacity: 1,
-                    duration: 0.3,
-                    onComplete: () => {
-                        // Desplazarse a la sección y ocultar la transición
-                        setTimeout(() => {
-                            document.getElementById(sectionId).scrollIntoView();
-                            horrorTransition.classList.remove('active');
-                            gsap.to(bloodSplash, { opacity: 0, duration: 0.3 });
-                            gsap.to(transitionImage, { opacity: 0, scale: 0, duration: 0.3 });
-                        }, 800);
-                    }
-                });
-            }, 300);
-        }
-
-        // Inicializar efectos de hover en elementos interactivos
-        function initHoverEffects() {
-            // Efecto hover para los botones de navegación
-            const navButtons = document.querySelectorAll('.nav-btn');
-            navButtons.forEach(btn => {
-                btn.addEventListener('mouseenter', () => {
-                    if (!btn.classList.contains('active')) {
-                        gsap.to(btn, { scale: 1.2, backgroundColor: 'rgba(155, 0, 0, 0.5)', duration: 0.3 });
-                    }
-                });
-
-                btn.addEventListener('mouseleave', () => {
-                    if (!btn.classList.contains('active')) {
-                        gsap.to(btn, { scale: 1, backgroundColor: 'rgba(255, 255, 255, 0.3)', duration: 0.3 });
-                    }
-                });
-            });
-
-            // Efecto hover para los personajes
-            const characters = document.querySelectorAll('.character');
-            characters.forEach(char => {
-                char.addEventListener('mouseenter', () => {
-                    gsap.to(char, { y: -20, duration: 0.3, ease: "power2.out" });
-                });
-
-                char.addEventListener('mouseleave', () => {
-                    gsap.to(char, { y: 0, duration: 0.3, ease: "power2.out" });
-                });
-            });
-        }
-
-        // Función para añadir efectos de sonido
-        function setupSoundEffects() {
-            // Crear elementos de audio
-            const clickSound = new Audio('/api/placeholder/audio');
-            const hoverSound = new Audio('/api/placeholder/audio');
-            const acceptSound = new Audio('/api/placeholder/audio');
-
-            // Asignar sonidos a eventos de interacción
-            document.querySelectorAll('.nav-btn, .glowing-btn').forEach(el => {
-                el.addEventListener('mouseenter', () => {
-                    hoverSound.currentTime = 0;
-                    hoverSound.volume = 0.2;
-                    hoverSound.play();
-                });
-
-                el.addEventListener('click', () => {
-                    clickSound.currentTime = 0;
-                    clickSound.volume = 0.3;
-                    clickSound.play();
-                });
-            });
-
-            // Sonido especial para el botón de aceptar
-            document.getElementById('acceptBtn').addEventListener('click', () => {
-                setTimeout(() => {
-                    acceptSound.volume = 0.5;
-                    acceptSound.play();
-                }, 500);
-            });
-        }
-
-        // Inicializar todos los efectos adicionales
-        function initAdditionalEffects() {
-            initHoverEffects();
-            setupSoundEffects();
-        }
-
-        function checkOrientation() {
-            const orientationMessage = document.getElementById('orientationMessage');
-            if (window.innerHeight < 500 && window.innerWidth > window.innerHeight) {
-                orientationMessage.style.display = 'flex';
+            if (isPlaying) {
+                audioPlayer.pause();
+                playIcon.textContent = '▶️';
+                playText.textContent = 'REPRODUCIR';
+                isPlaying = false;
             } else {
-                orientationMessage.style.display = 'none';
+                audioPlayer.play().then(() => {
+                    playIcon.textContent = '⏸️';
+                    playText.textContent = 'PAUSAR';
+                    isPlaying = true;
+                    // Iniciar lluvia de letras cuando empiece la música
+                    createLyricsExplosion();
+                }).catch((error) => {
+                    console.error('Error al reproducir:', error);
+                    alert('No se pudo reproducir la música. Verifica la URL.');
+                });
             }
         }
 
-        window.addEventListener('resize', checkOrientation);
-        window.addEventListener('orientationchange', checkOrientation);
-        document.addEventListener('DOMContentLoaded', checkOrientation);
+        function createFallingItem(word = null) {
+            const item = document.createElement('div');
+            let content;
+            let isEmoji = false;
 
+            if (word) {
+                content = word;
+                item.classList.add('falling-word');
+            } else {
+                content = romanticWords[Math.floor(Math.random() * romanticWords.length)];
+                item.classList.add('falling-emoji');
+                isEmoji = true;
+            }
 
-        // Llamar a inicializar efectos adicionales después de que cargue la página
-        window.addEventListener('load', initAdditionalEffects);
+            item.textContent = content;
+            item.className += ' falling-item';
+
+            if (isEmoji) {
+                item.classList.add('falling-emoji');
+            } else {
+                item.classList.add('falling-word');
+            }
+
+            item.style.left = Math.random() * (window.innerWidth - 150) + 'px';
+
+            const duration = Math.random() * 4 + 4;
+            item.style.animationDuration = duration + 's';
+
+            document.body.appendChild(item);
+
+            setTimeout(() => {
+                if (item.parentNode) {
+                    item.parentNode.removeChild(item);
+                }
+            }, duration * 1000 + 500);
+        }
+
+        function createFloatingHeart() {
+            const heart = document.createElement('div');
+            const hearts = ['💖', '💕', '❤️', '💗', '💝'];
+            heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.className = 'floating-heart';
+
+            heart.style.left = Math.random() * (window.innerWidth - 50) + 'px';
+
+            const duration = Math.random() * 2 + 3;
+            heart.style.animationDuration = duration + 's';
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.parentNode.removeChild(heart);
+                }
+            }, duration * 1000 + 500);
+        }
+
+        function createLyricsExplosion() {
+            if (currentLyrics.length > 0) {
+                // Usar la letra de la canción personalizada
+                for (let i = 0; i < 30; i++) {
+                    setTimeout(() => {
+                        const randomLyric = currentLyrics[Math.floor(Math.random() * currentLyrics.length)];
+                        createFallingItem(randomLyric);
+                    }, i * 300);
+                }
+            } else {
+                // Usar palabras románticas por defecto
+                const defaultWords = [
+                    'Te amo', 'Mi amor', 'Corazón', 'Preciosa', 'Hermosa', 'Única',
+                    'Especial', 'Perfecta', 'Angelito', 'Cielo', 'Vida mía', 'Mi todo',
+                    'Forever', 'Siempre', 'Por siempre', 'Infinito', 'Eterno', 'Mi reina'
+                ];
+
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(() => {
+                        const randomWord = defaultWords[Math.floor(Math.random() * defaultWords.length)];
+                        createFallingItem(randomWord);
+                    }, i * 200);
+                }
+            }
+
+            // Agregar corazones flotantes
+            for (let i = 0; i < 12; i++) {
+                setTimeout(() => {
+                    createFloatingHeart();
+                }, i * 250);
+            }
+        }
+
+        // Animación continua de fondo (solo cuando la música esté reproduciendo)
+        setInterval(() => {
+            if (isPlaying) {
+                createFallingItem();
+            }
+        }, 3000);
+
+        setInterval(() => {
+            if (isPlaying) {
+                createFloatingHeart();
+            }
+        }, 4000);
+
+        // Cambiar mensaje principal
+        const mainMessages = [
+            '💖 TE QUIERO MUCHO 💖',
+            '🌹 ERES ÚNICA 🌹',
+            '✨ MI HERMOSA ✨',
+            '💕 MI BONITA 💕',
+            '🦋 ERES PERFECTA 🦋'
+        ];
+
+        let messageIndex = 0;
+        setInterval(() => {
+            messageIndex = (messageIndex + 1) % mainMessages.length;
+            document.querySelector('.main-title').textContent = mainMessages[messageIndex];
+        }, 5000);
+
+        // Inicializar todo al cargar la página
+        window.addEventListener('load', () => {
+            processLyrics();
+            loadMusic();
+            audioPlayer.volume = 0.5;
+        });
     </script>
-
 </body>
 
 </html>
