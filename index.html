@@ -448,7 +448,7 @@
 
     <script>
         // ===============================================
-        // CONFIGURACIÓN DE LA CANCIÓN Y LETRA
+        // CONFIGURACIÓN DE LA CANCIÓN
         // ===============================================
 
         // AQUÍ PONES LA URL DE TU CANCIÓN (puede ser local o de internet)
@@ -457,73 +457,42 @@
         // AQUÍ PONES EL TÍTULO DE LA CANCIÓN
         const songTitle = "Lo Tienes Todo";
 
-        // AQUÍ PONES LA LETRA COMPLETA DE LA CANCIÓN
-        const songLyrics = `
-        Nunca había amado como a ti
-        Desde que me quieres, comprendí
-        Que Dios tenía otros planes para mí
-        Y hasta que tú llegaste finalmente lo entendí
-        Que era nuestro momento
-        Y que ya nos tocaba ser feliz
-        ¿Qué más puedo pedir?, si tú lo tienes todo
-        Contigo me aplaqué, me hiciste a tu modo
-        Por ti, mi corazón ya no me cabe aquí en el pecho
-        Quiero gastar los días de mi vida a tu lado
-        Me gusta que nos vean tomados de la mano
-        Que todo el mundo sepa que me tienes enamorado
-        Y somos
-        ¡Julión Álvarez, oiga!
-        Que Dios tenía otros planes para mí
-        Y hasta que tú llegaste finalmente lo entendí
-        Que era nuestro momento
-        Y que ya nos tocaba ser feliz
-        ¿Qué más puedo pedir?, si tú lo tienes todo
-        Contigo me aplaqué, me hiciste a tu modo
-        Por ti, mi corazón ya no me cabe aquí en el pecho
-        Quiero gastar los días de mi vida a tu lado
-        Me gusta que nos vean tomados de la mano
-        Que todo el mundo sepa que me tienes enamorado
-        `;
+        // ===============================================
+        // PALABRAS BONITAS QUE CAERÁN
+        // ===============================================
+        
+        const romanticWords = [
+            // Emojis de amor
+            '💕', '❤️', '💖', '💝', '💗', '💓', '💘', '💞', '💟', '🌹',
+            '✨', '🌟', '⭐', '💫', '🦋', '🌺', '🌸', '🌷', '🌻', '🥰',
+            '😍', '💋', '👑', '🎀', '💐', '🌈', '☀️', '🌙', '💎', '🎶',
+            
+            // Palabras románticas en español
+            'Te amo', 'Mi amor', 'Corazón', 'Preciosa', 'Hermosa', 'Única',
+            'Especial', 'Perfecta', 'Angelito', 'Cielo', 'Vida mía', 'Mi todo',
+            'Mi reina', 'Princesa', 'Tesoro', 'Bonita', 'Dulzura', 'Cariño',
+            'Amor mío', 'Mi vida', 'Bebe', 'Chiquita', 'Linda', 'Guapa',
+            'Divina', 'Adorable', 'Encantadora', 'Radiante', 'Brillante',
+            
+            // Palabras en inglés
+            'Beautiful', 'Gorgeous', 'Amazing', 'Perfect', 'Angel', 'Baby',
+            'Sweetheart', 'Darling', 'Lovely', 'Stunning', 'Wonderful',
+            'Forever', 'Always', 'Dreams', 'Magic', 'Sunshine', 'Star',
+            
+            // Frases cortas
+            'Eres única', 'Te adoro', 'Mi sol', 'Mi luna', 'Mi estrella',
+            'Para siempre', 'Eternamente', 'Sin límites', 'Infinito amor',
+            'Contigo todo', 'Eres mía', 'Solo tuya', 'Mi mundo', 'Mi todo',
+            'Luz de mis ojos', 'Razón de ser', 'Mi felicidad', 'Mi alegría'
+        ];
 
         // ===============================================
         // NO MODIFICAR EL CÓDIGO DE ABAJO
         // ===============================================
 
-        const romanticWords = [
-            '💕', '❤️', '💖', '💝', '💗', '💓', '💘', '💞', '💟', '🌹',
-            '✨', '🌟', '⭐', '💫', '🦋', '🌺', '🌸', '🌷', '🌻', '🥰'
-        ];
-
-        let currentLyrics = [];
         let isPlaying = false;
         let audioPlayer = document.getElementById('audioPlayer');
         let musicLoaded = false;
-
-        // Procesar la letra de la canción
-        function processLyrics() {
-            const words = songLyrics.split(/\s+/).filter(word => word.length > 2);
-            const lines = songLyrics.split('\n').filter(line => line.trim().length > 5);
-
-            currentLyrics = [];
-
-            // Agregar palabras individuales (limpias)
-            words.forEach(word => {
-                const cleanWord = word.replace(/[.,!?;:()]/g, '').trim();
-                if (cleanWord.length > 2) {
-                    currentLyrics.push(cleanWord);
-                }
-            });
-
-            // Agregar frases cortas
-            lines.forEach(line => {
-                const cleanLine = line.trim();
-                if (cleanLine.length > 5 && cleanLine.length < 30) {
-                    currentLyrics.push(cleanLine);
-                }
-            });
-
-            console.log('Letra procesada:', currentLyrics.length, 'elementos');
-        }
 
         // Cargar la música automáticamente
         function loadMusic() {
@@ -574,8 +543,8 @@
                     playIcon.textContent = '⏸️';
                     playText.textContent = 'PAUSAR';
                     isPlaying = true;
-                    // Iniciar lluvia de letras cuando empiece la música
-                    createLyricsExplosion();
+                    // Iniciar lluvia de palabras bonitas cuando empiece la música
+                    createRomanticExplosion();
                 }).catch((error) => {
                     console.error('Error al reproducir:', error);
                     alert('No se pudo reproducir la música. Verifica la URL.');
@@ -588,24 +557,24 @@
             let content;
             let isEmoji = false;
 
+            // Siempre usar palabras románticas bonitas
             if (word) {
                 content = word;
-                item.classList.add('falling-word');
             } else {
                 content = romanticWords[Math.floor(Math.random() * romanticWords.length)];
-                item.classList.add('falling-emoji');
+            }
+
+            // Determinar si es emoji o palabra
+            if (content.length <= 2 && /[\u{1F300}-\u{1F9FF}]/u.test(content)) {
                 isEmoji = true;
+                item.classList.add('falling-emoji');
+            } else {
+                item.classList.add('falling-word');
             }
 
             item.textContent = content;
             item.className += ' falling-item';
-
-            if (isEmoji) {
-                item.classList.add('falling-emoji');
-            } else {
-                item.classList.add('falling-word');
-            }
-
+            
             item.style.left = Math.random() * (window.innerWidth - 150) + 'px';
 
             const duration = Math.random() * 4 + 4;
@@ -622,7 +591,7 @@
 
         function createFloatingHeart() {
             const heart = document.createElement('div');
-            const hearts = ['💖', '💕', '❤️', '💗', '💝'];
+            const hearts = ['💖', '💕', '❤️', '💗', '💝', '🌹', '🌺', '🌸', '🦋', '✨'];
             heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
             heart.className = 'floating-heart';
 
@@ -640,33 +609,17 @@
             }, duration * 1000 + 500);
         }
 
-        function createLyricsExplosion() {
-            if (currentLyrics.length > 0) {
-                // Usar la letra de la canción personalizada
-                for (let i = 0; i < 30; i++) {
-                    setTimeout(() => {
-                        const randomLyric = currentLyrics[Math.floor(Math.random() * currentLyrics.length)];
-                        createFallingItem(randomLyric);
-                    }, i * 300);
-                }
-            } else {
-                // Usar palabras románticas por defecto
-                const defaultWords = [
-                    'Te amo', 'Mi amor', 'Corazón', 'Preciosa', 'Hermosa', 'Única',
-                    'Especial', 'Perfecta', 'Angelito', 'Cielo', 'Vida mía', 'Mi todo',
-                    'Forever', 'Siempre', 'Por siempre', 'Infinito', 'Eterno', 'Mi reina'
-                ];
-
-                for (let i = 0; i < 20; i++) {
-                    setTimeout(() => {
-                        const randomWord = defaultWords[Math.floor(Math.random() * defaultWords.length)];
-                        createFallingItem(randomWord);
-                    }, i * 200);
-                }
+        function createRomanticExplosion() {
+            // Crear una explosión inicial de palabras románticas
+            for (let i = 0; i < 25; i++) {
+                setTimeout(() => {
+                    const randomWord = romanticWords[Math.floor(Math.random() * romanticWords.length)];
+                    createFallingItem(randomWord);
+                }, i * 200);
             }
 
             // Agregar corazones flotantes
-            for (let i = 0; i < 12; i++) {
+            for (let i = 0; i < 15; i++) {
                 setTimeout(() => {
                     createFloatingHeart();
                 }, i * 250);
@@ -678,13 +631,13 @@
             if (isPlaying) {
                 createFallingItem();
             }
-        }, 3000);
+        }, 2500);
 
         setInterval(() => {
             if (isPlaying) {
                 createFloatingHeart();
             }
-        }, 4000);
+        }, 3500);
 
         // Cambiar mensaje principal
         const mainMessages = [
@@ -692,18 +645,20 @@
             '🌹 ERES ÚNICA 🌹',
             '✨ MI HERMOSA ✨',
             '💕 MI BONITA 💕',
-            '🦋 ERES PERFECTA 🦋'
+            '🦋 ERES PERFECTA 🦋',
+            '👑 MI PRINCESA 👑',
+            '🌟 MI ESTRELLA 🌟',
+            '💎 MI TESORO 💎'
         ];
 
         let messageIndex = 0;
         setInterval(() => {
             messageIndex = (messageIndex + 1) % mainMessages.length;
             document.querySelector('.main-title').textContent = mainMessages[messageIndex];
-        }, 5000);
+        }, 4000);
 
         // Inicializar todo al cargar la página
         window.addEventListener('load', () => {
-            processLyrics();
             loadMusic();
             audioPlayer.volume = 0.5;
         });
